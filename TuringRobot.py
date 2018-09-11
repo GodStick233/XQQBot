@@ -11,7 +11,7 @@ def answer(ask):
             }
         },
         "userInfo": {
-            "apiKey": "#",
+            "apiKey": "#你的apikey",
             "userId": "319278"
         }
     }
@@ -21,5 +21,7 @@ def answer(ask):
     retext = response.text
     answ = re.compile('{.*?results":.*?values.*?text":"(.*?)"}', re.S)
     text = re.findall(answ, retext)
+    text = str(text[0])
     return text
+
 
